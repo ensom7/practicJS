@@ -1,0 +1,33 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.news{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    gap:50px;
+    width: 800px;
+}
+.news-content{
+    border: 1px solid #C0C0C0;
+    border-radius: 15px;
+    padding: 20px;
+}
+.date-news{
+    color: #C0C0C0;
+    font-size: 12px;
+}
+.id-news{
+    color: #C0C0C0;
+    font-size: 12px;
+}
+.news-up{
+    display: flex;
+}
+.news-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.aut{
+    font-weight: 700;
+}
