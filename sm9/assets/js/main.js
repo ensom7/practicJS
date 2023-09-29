@@ -37,13 +37,14 @@ document.addEventListener('keyup', function(event){
 })
 
 let blockBox = document.querySelector('.block')
+
 document.addEventListener('keydown', function(event){
     if(event.key == 'w'){
         blockBox.style.top = blockBox.offsetTop - 10 + 'px'
     } else if(event.key == 'a'){
         blockBox.style.left = blockBox.offsetLeft - 10 + 'px'
     } else if(event.key == 'd'){
-    blockBox.style.left = blockBox.offsetLeft + 10 + 'px'
+        blockBox.style.left = blockBox.offsetLeft + 10 + 'px'
     } else if(event.key == 's'){
         blockBox.style.top = blockBox.offsetTop + 10 + 'px'
     }

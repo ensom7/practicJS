@@ -1,0 +1,30 @@
+#input1,#input2{
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 3px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+
+#inputs{
+    width: 200px;
+    margin: 50px auto;
+    text-align: center;
+}
+.btn{
+    border-radius: 3px;
+    background-color: green;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+}
+.link-answer{
+    color: black;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.gg{
+    font-size: 30px;
+}
+
