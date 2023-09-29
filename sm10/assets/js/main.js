@@ -1,55 +1,50 @@
-let in_name = document.getElementById("input1");
-let in_date = document.getElementById("input2");
+let namee = document.getElementById("input1");
+let date = document.getElementById("input2");
 let err = document.getElementById("err");
-let isErr;
+let isErr = "";
+let lablename = document.getElementById('err');
+let labledate = document.getElementById('err');
+
 let btn = document.getElementById("button");
 let form = document.getElementById("inputs");
 let link = document.getElementById("link");
 
 
-form.addEventListener('submit',function(event){
-    event.preventDefault()
-    if(in_name.value == ""){
-        err.insertAdjacentHTML('beforeend','Заполните поле с именем<br>');
-        in_name.style.boxShadow = '0 0 10px 3px red';
-        isErr = true;
 
-    }else if(in_name.value.length < 2){
-        err.insertAdjacentHTML('beforeend','Имя должно быть больше 2<br>');
-        
-        in_name.style.boxShadow = '0 0 10px 3px red';
-        isErr = true;
-    }
-    else{
-        in_name.style.boxShadow = '0 0 10px 3px green';
-        err.innerHTML = "";
-        isErr = false;
-    }
-
-       
-    if(in_date.value == ""){
-        err.insertAdjacentHTML('beforeend','Заполните поле с датой<br>');
-        in_date.style.boxShadow = '0 0 10px 3px red';
-        
-
-    }else if(in_date.value.length < 4 || in_date.value.length > 4 ){
-        err.insertAdjacentHTML('beforeend','В дате должно быть 4 значения<br>');
-        in_date.style.boxShadow = '0 0 10px 3px red';
-        isErr = true;
-    }
-    else if((2023 - in_date.value) < 18){
-        err.insertAdjacentHTML('beforeend','Вам нет 18 лет');
-        in_date.style.boxShadow = "0 0 10px 3px red";
+form.addEventListener('submit', function(event){
     
+    lablename.innerHTML="";
+    labledate.innerHTML="";
+
+    if(namee.value.length < 2){
+        namee.style.border = "1px solid red"
+        lablename.insertAdjacentHTML('beforeend','Имя должно содержать не менее 2 символов')
+        lablename.style.color = "red";
+        isErr = "true"
+
     }
-    else{
+        else if(date.value == ""){
+        date.style.border = "1px solid red"
+        labledate.insertAdjacentHTML('beforeend','Введите год рождения')
+        labledate.style.color = "red";
+        isErr = "true"
+    }else if((2023 - date.value) < 18){
+        date.style.border = "1px solid red"
+        labledate.insertAdjacentHTML('beforeend','Вам нет 18 лет')
+        labledate.style.color = "red";
+        isErr = "true"
+        // let err = ''
+    }   else{
+        namee.style.border = "1px solid green"
+        date.style.border = "1px solid green";
+        link.style.display = "block"
         link.insertAdjacentHTML('beforeend','<a href="https://club.z-go.ru/?do=exit" class="link-answer">Ссылка</a>');
-        in_date.style.boxShadow = '0 0 10px 3px green';
-        isErr = false;
-    }   
+    }
 
-
+    console.log(isErr)
 
 })
+
+
 
 
